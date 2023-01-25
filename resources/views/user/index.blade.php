@@ -96,17 +96,7 @@
         <table class="table table-bordered" id="order-dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>S.N.</th>
-              <th>Order No.</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Quantity</th>
-              <th>Total Amount</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tfoot>
+              <th>S. <li class="{{Request::path()=='blog' ? 'active' : ''}}"><a href="{{route('blog')}}">Blog</a></li>									
             <tr>
               <th>S.N.</th>
               <th>Order No.</th>

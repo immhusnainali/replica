@@ -53,8 +53,7 @@ Route::get('/checkout','CartController@checkout')->name('checkout')->middleware(
 Route::get('/wishlist',function(){
     return view('frontend.pages.wishlist');
 })->name('wishlist');
-Route::get('/wishlist/{slug}','WishlistController@wishlist')->name('add-to-wishlist')->middleware('user');
-Route::get('wishlist-delete/{id}','WishlistController@wishlistDelete')->name('wishlist-delete');
+
 Route::post('cart/order','OrderController@store')->name('cart.order');
 Route::get('order/pdf/{id}','OrderController@pdf')->name('order.pdf');
 Route::get('/income','OrderController@incomeChart')->name('product.order.income');
@@ -62,9 +61,7 @@ Route::get('/income','OrderController@incomeChart')->name('product.order.income'
 Route::get('/product-grids','FrontendController@productGrids')->name('product-grids');
 Route::get('/product-lists','FrontendController@productLists')->name('product-lists');
 Route::match(['get','post'],'/filter','FrontendController@productFilter')->name('shop.filter');
-// Order Track
-Route::get('/product/track','OrderController@orderTrack')->name('order.track');
-Route::post('product/track/order','OrderController@productTrackOrder')->name('product.track.order');
+
 // Blog
 Route::get('/blog','FrontendController@blog')->name('blog');
 Route::get('/blog-detail/{slug}','FrontendController@blogDetail')->name('blog.detail');

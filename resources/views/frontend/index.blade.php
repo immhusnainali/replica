@@ -61,38 +61,7 @@
 
 <!--/ End Slider Area -->
 
-<!-- Start Small Banner  -->
-<section class="small-banner section">
-    <div class="container-fluid">
-        <div class="row">
-            @php 
-            $category_lists=DB::table('categories')->where('status','active')->limit(3)->get();
-            @endphp
-            @if($category_lists)
-                @foreach($category_lists as $cat)
-                    @if($cat->is_parent==1)
-                        <!-- Single Banner  -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="single-banner">
-                                @if($cat->photo)
-                                    <img src="{{$cat->photo}}" alt="{{$cat->photo}}">
-                                @else
-                                    <img src="https://via.placeholder.com/600x370" alt="#">
-                                @endif
-                                <div class="content">
-                                    <h3>{{$cat->title}}</h3>
-                                        <a href="{{route('product-cat',$cat->slug)}}">Discover Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                    <!-- /End Single Banner  -->
-                @endforeach
-            @endif
-        </div>
-    </div>
-</section>
-<!-- End Small Banner -->
+
 
 <!-- Start Product Area -->
 <div class="product-area section">
@@ -157,7 +126,7 @@
                                             <div class="button-head">
                                                 <div class="product-action">
                                                     <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                                                    <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}" ><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
+                                                    
                                                 </div>
                                                 <div class="product-action-2">
                                                     <a title="Add to cart" href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
@@ -190,9 +159,7 @@
         </div>
 </div>
 <!-- End Product Area -->
-{{-- @php
-    $featured=DB::table('products')->where('is_featured',1)->where('status','active')->orderBy('id','DESC')->limit(1)->get();
-@endphp --}}
+
 <!-- Start Midium Banner  -->
 <section class="midium-banner">
     <div class="container">
@@ -251,7 +218,7 @@
                                 <div class="button-head">
                                     <div class="product-action">
                                         <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                                        <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}" ><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
+                                       
                                     </div>
                                     <div class="product-action-2">
                                         <a href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
@@ -327,75 +294,8 @@
         </div>
     </div>
 </section>
-<!-- End Shop Home List  -->
-{{-- @foreach($featured as $data)
-    <!-- Start Cowndown Area -->
-    <section class="cown-down">
-        <div class="section-inner ">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 col-12 padding-right">
-                        <div class="image">
-                            @php 
-                                $photo=explode(',',$data->photo);
-                                // dd($photo);
-                            @endphp
-                            <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                        </div>	
-                    </div>	
-                    <div class="col-lg-6 col-12 padding-left">
-                        <div class="content">
-                            <div class="heading-block">
-                                <p class="small-title">Deal of day</p>
-                                <h3 class="title">{{$data->title}}</h3>
-                                <p class="text">{!! html_entity_decode($data->summary) !!}</p>
-                                @php 
-                                    $after_discount=($product->price-($product->price*$product->discount)/100)
-                                @endphp
-                                <h1 class="price">${{number_format($after_discount)}} <s>${{number_format($data->price)}}</s></h1>
-                                <div class="coming-time">
-                                    <div class="clearfix" data-countdown="2021/02/30"></div>
-                                </div>
-                            </div>
-                        </div>	
-                    </div>	
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /End Cowndown Area -->
-@endforeach --}}
-<!-- Start Shop Blog  -->
-<section class="shop-blog section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-title">
-                    <h2>From Our Blog</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            @if($posts)
-                @foreach($posts as $post)
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <!-- Start Single Blog  -->
-                        <div class="shop-single-blog">
-                            <img src="{{$post->photo}}" alt="{{$post->photo}}">
-                            <div class="content">
-                                <p class="date">{{$post->created_at->format('d M , Y. D')}}</p>
-                                <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>
-                                <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Continue Reading</a>
-                            </div>
-                        </div>
-                        <!-- End Single Blog  -->
-                    </div>
-                @endforeach
-            @endif
-            
-        </div>
-    </div>
-</section>
+
+
 <!-- End Shop Blog  -->
 
 <!-- Start Shop Services Area -->
@@ -443,7 +343,7 @@
 </section>
 <!-- End Shop Services Area -->
 
-@include('frontend.layouts.newsletter')
+
 
 <!-- Modal -->
 @if($product_lists)
@@ -562,12 +462,10 @@
                                             </div>
                                             <div class="add-to-cart">
                                                 <button type="submit" class="btn">Add to cart</button>
-                                                <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
+                                              
                                             </div>
                                         </form>
-                                        <div class="default-social">
-                                        <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -580,110 +478,12 @@
 <!-- Modal end -->
 @endsection
 
-@push('styles')
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
-    <style>
-        /* Banner Sliding */
-        #Gslider .carousel-inner {
-        background: #000000;
-        color:black;
-        }
 
-        #Gslider .carousel-inner{
-        height: 550px;
-        }
-        #Gslider .carousel-inner img{
-            width: 100% !important;
-            opacity: .8;
-        }
-
-        #Gslider .carousel-inner .carousel-caption {
-        bottom: 60%;
-        }
-
-        #Gslider .carousel-inner .carousel-caption h1 {
-        font-size: 50px;
-        font-weight: bold;
-        line-height: 100%;
-        color: #F7941D;
-        }
-
-        #Gslider .carousel-inner .carousel-caption p {
-        font-size: 18px;
-        color: black;
-        margin: 28px 0 28px 0;
-        }
-
-        #Gslider .carousel-indicators {
-        bottom: 70px;
-        }
-    </style>
-@endpush
 
 @push('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
-    {{-- <script>
-        $('.cart').click(function(){
-            var quantity=1;
-            var pro_id=$(this).data('id');
-            $.ajax({
-                url:"{{route('add-to-cart')}}",
-                type:"POST",
-                data:{
-                    _token:"{{csrf_token()}}",
-                    quantity:quantity,
-                    pro_id:pro_id
-                },
-                success:function(response){
-                    console.log(response);
-					if(typeof(response)!='object'){
-						response=$.parseJSON(response);
-					}
-					if(response.status){
-						swal('success',response.msg,'success').then(function(){
-							// document.location.href=document.location.href;
-						});
-					}
-                    else{
-                        window.location.href='user/login'
-                    }
-                }
-            })
-        });
-    </script> --}}
-    {{-- <script>
-        $('.wishlist').click(function(){
-            var quantity=1;
-            var pro_id=$(this).data('id');
-            // alert(pro_id);
-            $.ajax({
-                url:"{{route('add-to-wishlist')}}",
-                type:"POST",
-                data:{
-                    _token:"{{csrf_token()}}",
-                    quantity:quantity,
-                    pro_id:pro_id,
-                },
-                success:function(response){
-                    if(typeof(response)!='object'){
-                        response=$.parseJSON(response);
-                    }
-                    if(response.status){
-                        swal('success',response.msg,'success').then(function(){
-                            document.location.href=document.location.href;
-                        });
-                    }
-                    else{
-                        swal('error',response.msg,'error').then(function(){
-							// document.location.href=document.location.href;
-						}); 
-                    }
-                }
-            });
-        });
-    </script> --}}
+    
     <script>
         
         /*==================================================================
