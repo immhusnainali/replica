@@ -192,9 +192,7 @@
                                                         <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
 
                                                     </div>
-                                                    <div class="product-action-2">
-                                                        <a title="Add to cart" href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="product-content">
@@ -338,31 +336,7 @@
                                                     </div> --}}
                                                 </div>
                                             </div>
-                                            <form action="{{route('single-add-to-cart')}}" method="POST">
-                                                @csrf 
-                                                <div class="quantity">
-                                                    <!-- Input Order -->
-                                                    <div class="input-group">
-                                                        <div class="button minus">
-                                                            <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                                                <i class="ti-minus"></i>
-                                                            </button>
-                                                        </div>
-                                                        <input type="hidden" name="slug" value="{{$product->slug}}">
-                                                        <input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
-                                                        <div class="button plus">
-                                                            <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
-                                                                <i class="ti-plus"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <!--/ End Input Order -->
-                                                </div>
-                                                <div class="add-to-cart">
-                                                    <button type="submit" class="btn">Add to cart</button>
-                                                  
-                                                </div>
-                                            </form>
+                                            
                                             <div class="default-social">
                                             <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
                                             </div>
