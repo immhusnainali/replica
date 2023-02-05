@@ -50,7 +50,7 @@ class BannerController extends Controller
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }
         $data['slug']=$slug;
-        // return $slug;
+        
         $status=Banner::create($data);
         if($status){
             request()->session()->flash('success','Banner successfully added');

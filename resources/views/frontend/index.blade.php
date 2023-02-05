@@ -1,11 +1,11 @@
 @extends('frontend.layouts.master')
-@section('title','E-SHOP || HOME PAGE')
+@section('tit4666le','Daraz || HOME PAGE')
 @section('main-content')
 <!-- Slider Area -->
 <section class="hero-slider">
     <!-- Single Slider -->
 
-    {{-- <div class="single-slider">
+    {<div class="single-slider">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-9 offset-lg-3 col-12">
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>}
     <!--/ End Single Slider -->
 </section>
 @if(count($banners)>0)
@@ -39,7 +39,7 @@
         <div class="carousel-inner" role="listbox">
                 @foreach($banners as $key=>$banner)
                 <div class="carousel-item {{(($key==0)? 'active' : '')}}">
-                    <img class="first-slide" src="{{$banner->photo}}" alt="First slide">
+                    <img class="first-slide" src="/opt/lampp/htdocs/darazpk/replica/replica/resources/template/photos/1/Banner/banner-01.jpg"  alt="First slide" >
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                         <p>{!! html_entity_decode($banner->description) !!}</p>
