@@ -51,8 +51,8 @@
 													// dd($photo);
 													@endphp
 													@foreach($photo as $data)
-														<li data-thumb="{{$data}}" rel="adjustX:10, adjustY:">
-															<img src="{{$data}}" alt="{{$data}}">
+														<li data-thumb="{{$data}}" rel="adjustX:10, adjustY:10">
+															<img src="{{ asset('frontend/img/logo.png') }}" alt="{{$data}}">
 														</li>
 													@endforeach
 												</ul>
