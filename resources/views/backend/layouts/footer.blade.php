@@ -3,7 +3,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; . All Right Reserved.</span>
+            <span>Copyright &copy; {{ Date('Y') }}  Daraz. All Right Reserved.</span>
           </div>
         </div>
       </footer>

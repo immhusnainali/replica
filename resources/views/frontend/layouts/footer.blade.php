@@ -9,11 +9,7 @@
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
-<<<<<<< HEAD
 								<a href="index.html"><img src="{{asset('/backend/img/logonew.png')}}" alt="#"></a>
-=======
-								<a href="index.html"><img src="{{asset('backend/img/download.png')}}" alt="#"></a>
->>>>>>> umar
 							</div>
 							@php
 								$settings=DB::table('settings')->get();
@@ -51,11 +47,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
-<<<<<<< HEAD
 								<p>Copyright © 2023 Daraz.pk.All Rights Reserved.</p>
-=======
-								<p>Copyright © {{date('Y')}} Daraz.pk .All Rights Reserved.</p>
->>>>>>> umar
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">

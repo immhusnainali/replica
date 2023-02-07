@@ -5,11 +5,7 @@
       <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-store"></i>
       </div>
-<<<<<<< HEAD
       <div class="sidebar-brand-text mx-3">Daraz</div>
-=======
-      <div class="sidebar-brand-text mx-3">DARAZ</div>
->>>>>>> umar
     </a>
 
     <!-- Divider -->
