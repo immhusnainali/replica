@@ -39,21 +39,21 @@
 									<i class="fa fa-phone"></i>
 									<h4 class="title">Call us Now:</h4>
 									<ul>
-										<li>@foreach($settings as $data) {{$data->phone}} @endforeach</li>
+										<li>+925353355</li>
 									</ul>
 								</div>
 								<div class="single-info">
 									<i class="fa fa-envelope-open"></i>
 									<h4 class="title">Email:</h4>
 									<ul>
-										<li><a href="mailto:info@yourwebsite.com">@foreach($settings as $data) {{$data->email}} @endforeach</a></li>
+										<li><a href="mailto:info@yourwebsite.com">admin@gmail.com</a></li>
 									</ul>
 								</div>
 								<div class="single-info">
 									<i class="fa fa-location-arrow"></i>
 									<h4 class="title">Our Address:</h4>
 									<ul>
-										<li>@foreach($settings as $data) {{$data->address}} @endforeach</li>
+										<li>Lahore</li>
 									</ul>
 								</div>
 							</div>

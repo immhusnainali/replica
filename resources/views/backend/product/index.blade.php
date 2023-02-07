@@ -61,7 +61,7 @@
                 <tr>
                     <td>{{$product->id}}</td>
                     <td>{{$product->title}}</td>
-                    <td>{{$product->cat_info['title']}}
+                    
                       <sub>
                         @foreach($sub_cat_info as $data)
                           {{$data->title}}
@@ -89,7 +89,7 @@
                             @endphp
                             <img src="{{$photo[0]}}" class="img-fluid zoom" style="max-width:80px" alt="{{$product->photo}}">
                         @else
-                            <img src="{{asset('backend/img/thumbnail-default.jpg')}}" class="img-fluid" style="max-width:80px" alt="avatar.png">
+                            <img src="{{$photo[0]}}" class="img-fluid" style="max-width:80px" alt="avatar.png">
                         @endif
                     </td>
                     <td>

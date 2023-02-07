@@ -5,27 +5,6 @@
 <section class="hero-slider">
     <!-- Single Slider -->
 
-    {<div class="single-slider">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-lg-9 offset-lg-3 col-12">
-                    <div class="text-inner">
-                        <div class="row">
-                            <div class="col-lg-7 col-12">
-                                <div class="hero-text">
-                                    <h1><span>UP TO 50% OFF </span>Shirt For Man</h1>
-                                    <p>Maboriosam in a nesciung eget magnae <br> dapibus disting tloctio in the find it pereri <br> odiy maboriosm.</p>
-                                    <div class="button">
-                                        <a href="#" class="btn">Shop Now!</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>}
     <!--/ End Single Slider -->
 </section>
 @if(count($banners)>0)
@@ -39,11 +18,11 @@
         <div class="carousel-inner" role="listbox">
                 @foreach($banners as $key=>$banner)
                 <div class="carousel-item {{(($key==0)? 'active' : '')}}">
-                    <img class="first-slide" src="/opt/lampp/htdocs/darazpk/replica/replica/resources/template/photos/1/Banner/banner-01.jpg"  alt="First slide" >
+                    <img class="first-slide" src="{{ asset('/backend/img/bannerdaraz.jpg') }}" width="5000px" alt="First slide" >
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                         <p>{!! html_entity_decode($banner->description) !!}</p>
-                        <a class="btn btn-lg ws-btn wow fadeInUpBig" href="{{route('product-grids')}}" role="button">Shop Now<i class="far fa-arrow-alt-circle-right"></i></i></a>
+                        
                     </div>
                 </div>  
             @endforeach   
@@ -172,7 +151,7 @@
                             @endphp
                             <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
                             <div class="content">
-                                <p>{{$data->cat_info['title']}}</p>
+                             
                                 <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
                                 <a href="{{route('product-detail',$data->slug)}}">Shop Now</a>
                             </div>
@@ -219,7 +198,7 @@
                                        
                                     </div>
                                     <div class="product-action-2">
-                                        <a href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
+                                      
                                     </div>
                                 </div>
                             </div>

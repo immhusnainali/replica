@@ -30,7 +30,7 @@
 							@php
 								$settings=DB::table('settings')->get();
 							@endphp
-							<h3>Welcome To <span>Eshop</span></h3>
+							<h3>Welcome To <span>Daraz</span></h3>
 							<p>@foreach($settings as $data) {{$data->description}} @endforeach</p>
 							<div class="button">
 								
@@ -41,7 +41,7 @@
 					<div class="col-lg-6 col-12">
 						<div class="about-img overlay">
 							
-							<img src="@foreach($settings as $data) {{$data->photo}} @endforeach" alt="@foreach($settings as $data) {{$data->photo}} @endforeach">
+							<img src="{{ asset('/backend/img/download.png') }}" alt="@foreach($settings as $data) {{$data->photo}} @endforeach">
 						</div>
 					</div>
 				</div>

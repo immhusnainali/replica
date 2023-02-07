@@ -5,7 +5,7 @@
       <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-store"></i>
       </div>
-      <div class="sidebar-brand-text mx-3">ECOMMERCE</div>
+      <div class="sidebar-brand-text mx-3">DARAZ</div>
     </a>
 
     <!-- Divider -->
