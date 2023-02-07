@@ -112,7 +112,7 @@
                                         @endphp
                                         <div class="single-post first">
                                             <div class="image">
-                                                <img src="/home/codewithumar/Downloads/26574454.jpg" alt="{{$photo[0]}}">
+                                                <img src="{{ asset($photo[0]) }}" alt="{{$photo[0]}}">
                                             </div>
                                             <div class="content">
                                                 <h5><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h5>

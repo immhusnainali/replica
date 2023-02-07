@@ -44,7 +44,11 @@
                         @php
                             $settings=DB::table('settings')->get();
                         @endphp                    
+<<<<<<< HEAD
                         <a href="{{route('home')}}"><img src="{{ asset('/backend/img/logonew.png') }}" alt="loogo"></a>
+=======
+                        <a href="{{route('home')}}"><img src="{{ asset('/backend/img/download.png') }}" alt="logo"></a>
+>>>>>>> umar
                     </div>
                     <!--/ End Logo -->
                     <!-- Search Form -->

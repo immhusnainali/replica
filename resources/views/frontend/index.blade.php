@@ -5,6 +5,7 @@
 <section class="hero-slider">
     <!-- Single Slider -->
 
+<<<<<<< HEAD
     <!--{<div class="single-slider">
         <div class="container">
             <div class="row no-gutters">
@@ -26,6 +27,8 @@
             </div>
         </div>
     </div>}-->
+=======
+>>>>>>> umar
     <!--/ End Single Slider -->
 </section>
 @if(count($banners)>0)
@@ -39,11 +42,19 @@
         <div class="carousel-inner" role="listbox">
                 @foreach($banners as $key=>$banner)
                 <div class="carousel-item {{(($key==0)? 'active' : '')}}">
+<<<<<<< HEAD
                     <img class="first-slide" src="{{ asset('/backend/img/banner1.jpg') }}" width="5000px" alt="First slide" >
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                         <p>{!! html_entity_decode($banner->description) !!}</p>
                        
+=======
+                    <img class="first-slide" src="{{ asset('/backend/img/bannerdaraz.jpg') }}" width="5000px" alt="First slide" >
+                    <div class="carousel-caption d-none d-md-block text-left">
+                        <h1 class="wow fadeInDown">{{$banner->title}}</h1>
+                        <p>{!! html_entity_decode($banner->description) !!}</p>
+                        
+>>>>>>> umar
                     </div>
                 </div>  
             @endforeach   
@@ -171,7 +182,15 @@
                                 $photo=explode(',',$data->photo);
                             @endphp
                             <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
+<<<<<<< HEAD
                             
+=======
+                            <div class="content">
+                             
+                                <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
+                                <a href="{{route('product-detail',$data->slug)}}">Shop Now</a>
+                            </div>
+>>>>>>> umar
                         </div>
                     </div>
                     <!-- /End Single Banner  -->
@@ -215,7 +234,7 @@
                                        
                                     </div>
                                     <div class="product-action-2">
-                                        <a href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
+                                      
                                     </div>
                                 </div>
                             </div>

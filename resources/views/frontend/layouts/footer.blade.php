@@ -9,7 +9,11 @@
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
+<<<<<<< HEAD
 								<a href="index.html"><img src="{{asset('/backend/img/logonew.png')}}" alt="#"></a>
+=======
+								<a href="index.html"><img src="{{asset('backend/img/download.png')}}" alt="#"></a>
+>>>>>>> umar
 							</div>
 							@php
 								$settings=DB::table('settings')->get();
@@ -19,34 +23,7 @@
 						</div>
 						<!-- End Single Widget -->
 					</div>
-					<div class="col-lg-2 col-md-6 col-12">
-						<!-- Single Widget -->
-						<div class="single-footer links">
-							<h4>Information</h4>
-							<ul>
-								<li><a href="{{route('about-us')}}">About Us</a></li>
-								<li><a href="#">Faq</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="{{route('contact')}}">Contact Us</a></li>
-								<li><a href="#">Help</a></li>
-							</ul>
-						</div>
-						<!-- End Single Widget -->
-					</div>
-					<div class="col-lg-2 col-md-6 col-12">
-						<!-- Single Widget -->
-						<div class="single-footer links">
-							<h4>Customer Service</h4>
-							<ul>
-								<li><a href="#">Payment Methods</a></li>
-								<li><a href="#">Money-back</a></li>
-								<li><a href="#">Returns</a></li>
-								<li><a href="#">Shipping</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-							</ul>
-						</div>
-						<!-- End Single Widget -->
-					</div>
+					
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
@@ -74,7 +51,11 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
+<<<<<<< HEAD
 								<p>Copyright © 2023 Daraz.pk.All Rights Reserved.</p>
+=======
+								<p>Copyright © {{date('Y')}} Daraz.pk .All Rights Reserved.</p>
+>>>>>>> umar
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">
